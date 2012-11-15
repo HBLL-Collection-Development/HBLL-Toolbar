@@ -1,0 +1,44 @@
+<!ENTITY hblltoolbar.accesskey "T">
+<!ENTITY hblltoolbar.toolbarname "Barra de Ferramentas HBLL">
+<!ENTITY mainmenu.tooltiptext "Barra de Ferramentas HBLL no Menu Principal">
+<!ENTITY libraryhomepage.label "Site da Biblioteca">
+<!ENTITY libraryhomepage.accesskey "B">
+<!ENTITY libraryhomepage.tooltiptext "Navegar no site da biblioteca">
+<!ENTITY getresearchhelp.label "Obter ajuda na pesquisa">
+<!ENTITY getresearchhelp.accesskey "O">
+<!ENTITY getresearchhelp.tooltiptext "Contatar um bibliotecário para ajudar a sua pesquisa">
+<!ENTITY researchguides.label "Guias de Pesquisa">
+<!ENTITY researchguides.accesskey "E">
+<!ENTITY researchguides.tooltiptext "Obter um guia de pesquisa para ser ajudado em sua pesquisa">
+<!ENTITY libraryhours.label "Horário de funcionamento da biblioteca">
+<!ENTITY libraryhours.accesskey "H">
+<!ENTITY libraryhours.tooltiptext "Descubra o horário de funcionamento da iblioteca">
+<!ENTITY floormaps.label "Mapas dos Andares">
+<!ENTITY floormaps.accesskey "M">
+<!ENTITY floormaps.tooltiptext "Mapas da biblioteca">
+<!ENTITY groupstudyrooms.label "Reservas da Sala de Grupo de Estudo">
+<!ENTITY groupstudyrooms.accesskey "R">
+<!ENTITY groupstudyrooms.tooltiptext "Reserve uma sala de grupo de Estudo">
+<!ENTITY myaccount.label "Minha Conta">
+<!ENTITY myaccount.accesskey "M">
+<!ENTITY myaccount.tooltiptext "Renovar materiais da biblioteca">
+<!ENTITY ill.label "Empréstimo entre livrarias">
+<!ENTITY ill.accesskey "E">
+<!ENTITY ill.tooltiptext "Requisitar materiais não disponíveis na HBLL">
+<!ENTITY prefs.label "Preferências...">
+<!ENTITY prefs.tooltiptext "Escolher as Preferências da Barra de Ferramentas HBLL">
+<!ENTITY resize.tooltiptext "Redimensionar Caixa de Pesquisa">
+<!ENTITY select.tooltiptext "Use um menu drop-down para selecionar um tipo diferente de pesquisa">
+<!ENTITY federated.label "Buscar nos Bancos de Dados">
+<!ENTITY federated.tooltiptext "Busca em múltiplos bancos de dados simultaneamente">
+<!ENTITY google.label "Buscar no Google Scholar">
+<!ENTITY google.tooltiptext "Busca no Google Scholar">
+<!ENTITY journaltitle.label "Buscar no Journal Finder">
+<!ENTITY journaltitle.tooltiptext "Encontra jornais">
+<!ENTITY catalog.label "Buscar no ScholarSearch">
+<!ENTITY catalog.tooltiptext "Busca no ScholarSearch">
+<!ENTITY ry.tooltiptext "Entrar para o Route Y">
+<!ENTITY blackboard.tooltiptext "Entrar para o Blackboard">
+<!ENTITY addmylib.label "Para adicionar My Library">
+<!ENTITY addmylib.tooltiptext "Adicione esta página aos seus personalizado página 'My Library'">
+<!ENTITY isbn.label "Encontre livros por ISBN">  

@@ -1,0 +1,68 @@
+<?xml version="1.0"?> 
+
+<!-- add CSS stylesheets -->
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://hblltoolbar/locale/prefs.dtd">
+
+<prefwindow xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        id="HBLL_Options"
+	    title="&title.label;" 
+	    resizable="yes"
+        persist="width height screenX screenY"
+        onload="hblltoolbar.options.hblltoolbar_loadedOptions = true;"
+        onunload="hblltoolbar.options.hblltoolbar_loadedOptions = false;">
+
+    <prefpane id="hblltoolbar_paneOptions" label="Options" style="overflow: auto;">
+        <!-- preferences this prefpane is going to access -->
+        <preferences>
+            <preference id="extensions.hblltoolbar.default.search" name="extensions.hblltoolbar.default.search" type="string"/>
+        </preferences>
+
+        <!-- scripts have to be included inside the prefpane (bug 296418) -->
+        <script type="application/javascript" src="chrome://hblltoolbar/content/options.js"/>
+
+        <description class="header">
+            Customize the functionality of the HBLL Toolbar.
+        </description>
+        <separator class="groove-thin"/>	
+        <separator class="thin"/>
+
+        <groupbox>
+            <caption label="Default Search"/>
+            <!-- the values to return from onsync*preference are correlated with the 
+            'value' attribute of the radios; onsynctopreference/onsyncfrompreference 
+            will be called also when clicking on a radio -->
+            <radiogroup id="extensions.hblltoolbar.default.search"
+                preference="extensions.hblltoolbar.default.search"
+                onsyncfrompreference="
+                    if (hblltoolbar.options.hblltoolbar_loadedOptions)
+                        return;
+                    var defaultSearch = hblltoolbar.options.hblltoolbar_getPreference(hblltoolbar.options.HBLLTOOLBAR_SEARCH);
+                    if (defaultSearch == 'search_federated')
+                        return 'search_federated';
+                    if (defaultSearch == 'search_google')
+                        return 'search_google';
+                    if (defaultSearch == 'search_journal')
+                        return 'search_journal';
+                    if (defaultSearch == 'search_catalog')
+                        return 'search_catalog';
+                    else
+                        return '1';"
+                onsynctopreference="var radios = document.getElementById(hblltoolbar.options.HBLLTOOLBAR_SEARCH).childNodes;
+                    if (radios[1].selected) 
+                        return 'search_federated';
+                    else if (radios[2].selected) 
+                        return 'search_google';
+                    else if (radios[3].selected) 
+                        return 'search_journal';
+                    else
+                        return 'search_catalog';">
+                <radio label="&radio.1;" value="search_federated"/>
+                <radio label="&radio.2;" value="search_google"/>
+                <radio label="&radio.3;" value="search_journal"/>
+                <radio label="&radio.4;" value="search_catalog"/>
+            </radiogroup>
+        </groupbox>
+    </prefpane>
+    <button label="Save and Close" onclick="window.close();"/>
+</prefwindow>

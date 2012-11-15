@@ -1,0 +1,1 @@
+pref("extensions.hblltoolbar.default.search", 'search_federated');

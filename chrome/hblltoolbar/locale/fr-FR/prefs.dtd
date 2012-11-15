@@ -1,0 +1,6 @@
+<!ENTITY title.label "Préférences de la barre de HBLL">
+<!ENTITY groupbox.label "Paramétrer la recherche par défaut">
+<!ENTITY radio.1 "Bases de données multiples">
+<!ENTITY radio.2 "Google Scholar">
+<!ENTITY radio.3 "Journal Finder">
+<!ENTITY radio.4 "Catalogue de la bibliothèque">

@@ -1,0 +1,20 @@
+#HBLL-MainMenu{list-style-image:url("chrome://hblltoolbar/skin/hbll.png");}
+#HBLL-RY-Login{list-style-image:url("chrome://hblltoolbar/skin/ry.png");}
+#HBLL-BB-Login{list-style-image:url("chrome://hblltoolbar/skin/bb.png");}
+#HBLL-Add-MyLib{list-style-image:url("chrome://hblltoolbar/skin/mylib.png");}
+#HBLL-ResizeBar{background-image:url("chrome://hblltoolbar/skin/gripper.png");min-height:22px;min-width:3px;}
+#HBLL-ResizeSplitter{background:transparent;border:none !important;}
+.federated{list-style-image:url("chrome://hblltoolbar/skin/federated.png");-moz-box-orient:horizontal;}
+.scholar{list-style-image:url("chrome://hblltoolbar/skin/scholar.png");-moz-box-orient:horizontal;}
+.journals{list-style-image:url("chrome://hblltoolbar/skin/journals.png");-moz-box-orient:horizontal;}
+.catalog{list-style-image:url("chrome://hblltoolbar/skin/catalog.png");-moz-box-orient:horizontal;}
+#HBLL_Options{-moz-appearance: inherit !important;} 
+/* options dialog navigation icons; they have to be 32x32 */
+#HBLL_Options radio[pane=hblltoolbar_paneOptions]{list-style-image:url("chrome://browser/skin/preferences/Options.png");-moz-image-region:rect(0,32px,32px,0);}
+#HBLL_Options radio[pane=hblltoolbar_paneAbout]{list-style-image:url("chrome://hblltoolbar/skin/icon.png");}
+
+#HBLL_ISBN_Found{list-style-image:url("chrome://hblltoolbar/skin/books.png"); background-color: teal}
+#HBLL_No_ISBN_Found{list-style-image:url("chrome://hblltoolbar/skin/books_65%opacity.png");}
+#HBLL_BookFound {list-style-image:url("chrome://hblltoolbar/skin/checkmark.jpeg");}
+#HBLL_BookNotFound{list-style-image:url("chrome://hblltoolbar/skin/x_mark.jpeg");}
+#HBLL_Loading{list-style-image: none; font-family: monospace; text-align:center; font-size:medium;}

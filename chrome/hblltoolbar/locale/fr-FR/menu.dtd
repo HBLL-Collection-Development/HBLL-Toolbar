@@ -1,0 +1,44 @@
+<!ENTITY hblltoolbar.accesskey "H">
+<!ENTITY hblltoolbar.toolbarname "Barre de la HBLL">
+<!ENTITY mainmenu.tooltiptext "Menu principal de la barre de la HBLL">
+<!ENTITY libraryhomepage.label "Page d&apos;accueil de la bibliothèque">
+<!ENTITY libraryhomepage.accesskey "a">
+<!ENTITY libraryhomepage.tooltiptext "Parcourir la page d&apos;accueil de la bibliothèque">
+<!ENTITY getresearchhelp.label "Obtenir de l&apos;aide pour la recherche">
+<!ENTITY getresearchhelp.accesskey "O">
+<!ENTITY getresearchhelp.tooltiptext "Contacter un bibliothécaire pour vous aider dans votre recherche">
+<!ENTITY researchguides.label "Tutoriels de recherche">
+<!ENTITY researchguides.accesskey "T">
+<!ENTITY researchguides.tooltiptext "Chercher un guide pour vous aider à mener votre recherche">
+<!ENTITY libraryhours.label "Heures d&apos;ouverture de la bibliothèque">
+<!ENTITY libraryhours.accesskey "H">
+<!ENTITY libraryhours.tooltiptext "Procure les heures ouvrables de la bibliothèque">
+<!ENTITY floormaps.label "Plans des salles">
+<!ENTITY floormaps.accesskey "P">
+<!ENTITY floormaps.tooltiptext "Plans de la bibliothèque">
+<!ENTITY groupstudyrooms.label "Réservations des salles d&apos;étude pour les groupes">
+<!ENTITY groupstudyrooms.accesskey "R">
+<!ENTITY groupstudyrooms.tooltiptext "Réserver une salle d&apos;étude pour un groupe">
+<!ENTITY myaccount.label "Mon compte">
+<!ENTITY myaccount.accesskey "M">
+<!ENTITY myaccount.tooltiptext "Renouvellement des documents de la bibliothèque">
+<!ENTITY ill.label "Prêt inter-bibliothèques">
+<!ENTITY ill.accesskey "i">
+<!ENTITY ill.tooltiptext "Demande de documents indisponibles à la HBLL">
+<!ENTITY prefs.label "Préférences…">
+<!ENTITY prefs.tooltiptext "Paramétrer les préférences pour la barre de la HBLL">
+<!ENTITY resize.tooltiptext "Redimensionner la boîte de recherche">
+<!ENTITY select.tooltiptext "Utiliser le menu déroulant pour choisir un autre type de recherche">
+<!ENTITY federated.label "Rechercher dans de multiples bases de données">
+<!ENTITY federated.tooltiptext "Recherche simultanée dans de multiples bases de données">
+<!ENTITY google.label "Rechercher avec Google Scholar">
+<!ENTITY google.tooltiptext "Recherche avec Google Scholar">
+<!ENTITY journaltitle.label "Rechercher avec l&apos;index des périodiques">
+<!ENTITY journaltitle.tooltiptext "Trouver des périodiques">
+<!ENTITY catalog.label "Rechercher dans le ScholarSearch">
+<!ENTITY catalog.tooltiptext "Recherche dans le ScholarSearch">
+<!ENTITY ry.tooltiptext "Connectez-vous à Route Y">
+<!ENTITY blackboard.tooltiptext "Connectez-vous à Blackboard">
+<!ENTITY addmylib.label "Ajouter à My Library">
+<!ENTITY addmylib.tooltiptext "Ajouter cette page à votre personnalisé la page 'My Library'">
+<!ENTITY isbn.label "Trouver des livres par ISBN"> 

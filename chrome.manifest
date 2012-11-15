@@ -1,0 +1,6 @@
+content hblltoolbar chrome/hblltoolbar/content/
+overlay chrome://browser/content/browser.xul chrome://hblltoolbar/content/overlay.xul
+locale hblltoolbar en-US chrome/hblltoolbar/locale/en-US/
+locale hblltoolbar fr-FR chrome/hblltoolbar/locale/fr-FR/
+locale hblltoolbar pt-BR chrome/hblltoolbar/locale/pt-BR/
+skin hblltoolbar classic/1.0 chrome/hblltoolbar/skin/

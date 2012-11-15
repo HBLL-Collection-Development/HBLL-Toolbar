@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://hblltoolbar/skin/hblltoolbar.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://hblltoolbar/locale/menu.dtd">
+<overlay id="HBLL-Overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+ <script type="application/x-javascript" src="chrome://hblltoolbar/content/overlay.js"/>
+ <script type="application/x-javascript" src="chrome://hblltoolbar/content/options.js"/>
+ <script type="application/x-javascript" src="chrome://hblltoolbar/content/ISBNFinder.js"/>
+ <script type="application/x-javascript" src="chrome://hblltoolbar/content/HttpRequestQueue.js"/>
+ <script type="application/x-javascript" src="chrome://hblltoolbar/content/ISBNQueryModule.js"/>
+ <stringbundleset id="stringbundleset">
+    <stringbundle id="string-bundle" src="chrome://hblltoolbar/locale/hblltoolbar.properties"/>
+ </stringbundleset>
+ <preferences>
+     <preference id="extensions.hblltoolbar.default.search" name="extensions.hblltoolbar.default.search" type="string"/>
+ </preferences>
+  <toolbox id="navigator-toolbox">
+    <toolbar id="HBLL-Toolbar" accesskey="&hblltoolbar.accesskey;" class="chromeclass-toolbar" context="toolbar-context-menu" toolbarname="&hblltoolbar.toolbarname;" hidden="false" persist="hidden">
+        <!-- Main menu commands -->
+        <command id="cmd_openLibHome" oncommand="hblltoolbar.overlay.HBLL_LoadURL('http://www.lib.byu.edu/')"/>
+        <command id="cmd_openAskLib" oncommand="hblltoolbar.overlay.HBLL_LoadURL('http://www.lib.byu.edu/ask.html')"/>
+        <command id="cmd_openResGuide" oncommand="hblltoolbar.overlay.HBLL_LoadURL('http://lib.byu.edu/subsatoz.html')"/>
+        <command id="cmd_openLibHours" oncommand="hblltoolbar.overlay.HBLL_LoadURL('http://www.lib.byu.edu/hours.html')"/>
+        <command id="cmd_openFloorMaps" oncommand="hblltoolbar.overlay.HBLL_LoadURL('http://www.lib.byu.edu/maps.html')"/>
+        <command id="cmd_openGroupStudy" oncommand="hblltoolbar.overlay.HBLL_LoadURL('http://groupstudy.lib.byu.edu/')"/>
+        <command id="cmd_openMyAccount" oncommand="hblltoolbar.overlay.HBLL_LoadURL('http://www.lib.byu.edu/account.html')"/>
+        <command id="cmd_openILL" oncommand="hblltoolbar.overlay.HBLL_LoadURL('https://illiad.lib.byu.edu/illiad/ill.html')"/>
+        <command id="cmd_prefs" oncommand="window.open('chrome://hblltoolbar/content/options.xul', 'Preferences', 'centerscreen,chrome,modal,resizable');"/>
+        <!-- Search commands -->
+        <command id="cmd_searchFederated" oncommand="search='federated';document.getElementById('HBLL-Main').setAttribute('class', 'federated');document.getElementById('HBLL-Main').setAttribute('label', '&federated.label;');"/>
+        <command id="cmd_searchGoogle" oncommand="search='google';document.getElementById('HBLL-Main').setAttribute('class', 'scholar');document.getElementById('HBLL-Main').setAttribute('label', '&google.label;');"/>
+        <command id="cmd_searchJournal" oncommand="search='journal';document.getElementById('HBLL-Main').setAttribute('class', 'journals');document.getElementById('HBLL-Main').setAttribute('label', '&journaltitle.label;');"/>
+        <command id="cmd_searchCatalog" oncommand="search='catalog';document.getElementById('HBLL-Main').setAttribute('class', 'catalog');document.getElementById('HBLL-Main').setAttribute('label', '&catalog.label;');"/>
+		<!-- Login commands -->
+        <command id="cmd_loginRY" oncommand="hblltoolbar.overlay.HBLL_LoadURL('http://ry.byu.edu/')"/>
+        <command id="cmd_loginBB" oncommand="hblltoolbar.overlay.HBLL_LoadURL('http://blackboard.byu.edu/')"/>
+        <command id="cmd_addmylib" oncommand="hblltoolbar.overlay.HBLL_LoadURL('http://mylibrary.lib.byu.edu/addSiteLink.php?linkurl=' + window._content.document.location)"/>
+		<!-- ISBN Lookup command -->
+		<command id="cmd_ISBNLookup" onpopupshowing="hblltoolbar.ISBNQueryModule.populateISBNLookupMenu()"/>
+		
+      <toolbaritem flex="0">
+        <toolbarbutton id="HBLL-MainMenu" type="menu" tooltiptext="&mainmenu.tooltiptext;">
+          <menupopup>
+
+            <menuitem label="&libraryhomepage.label;" accesskey="&libraryhomepage.accesskey;" tooltiptext="&libraryhomepage.tooltiptext;" command="cmd_openLibHome"/>
+            <menuitem label="&getresearchhelp.label;" accesskey="&getresearchhelp.accesskey;" tooltiptext="&getresearchhelp.tooltiptext;" command="cmd_openAskLib"/>
+            <menuitem label="&researchguides.label;" accesskey="&researchguides.accesskey;" tooltiptext="&researchguides.tooltiptext;" command="cmd_openResGuide"/>
+
+            <menuseparator />
+
+            <menuitem label="&libraryhours.label;" accesskey="&libraryhours.accesskey;" tooltiptext="&libraryhours.tooltiptext;" command="cmd_openLibHours"/>
+            <menuitem label="&floormaps.label;" accesskey="&floormaps.accesskey;" tooltiptext="&floormaps.tooltiptext;" command="cmd_openFloorMaps"/>
+            <menuitem label="&groupstudyrooms.label;" accesskey="&groupstudyrooms.accesskey;" tooltiptext="&groupstudyrooms.tooltiptext;" command="cmd_openGroupStudy"/>
+
+            <menuseparator />
+
+            <menuitem label="&myaccount.label;" accesskey="&myaccount.accesskey;" tooltiptext="&myaccount.tooltiptext;" command="cmd_openMyAccount"/>
+            <menuitem label="&ill.label;" accesskey="&ill.accesskey;" tooltiptext="&ill.tooltiptext;" command="cmd_openILL"/>
+
+            <menuseparator />
+
+            <menuitem label="&prefs.label;" tooltiptext="&prefs.tooltiptext;" command="cmd_prefs"/>
+
+          </menupopup>
+        </toolbarbutton>
+      </toolbaritem>
+
+      <toolbaritem id="HBLL-SearchTerms-Item" persist="width">
+        <textbox id="HBLL-SearchTerms" type="autocomplete" autocompletesearch="form-history" flex="1" minwidth="100" width="250" onkeypress="if (event.keyCode == 13) {hblltoolbar.overlay.HBLL_Search(event,search);}"/>
+      </toolbaritem>
+
+      <splitter id="HBLL-ResizeSplitter" state="open" collapse="none" resizebefore="closest" resizeafter="farthest" tooltiptext="&resize.tooltiptext;">
+        <vbox id="HBLL-ResizeBar" />
+      </splitter>
+
+      <toolbaritem flex="0">
+        <toolbarbutton type="menu" label="&federated.label;" tooltiptext="&select.tooltiptext;" id="HBLL-Main" class="federated">
+          <menupopup>
+              <radiogroup id="extensions.hblltoolbar.default.search"
+                  preference="extensions.hblltoolbar.default.search"
+                  onsyncfrompreference="
+                      if (hblltoolbar.options.hblltoolbar_loadedOptions)
+                          return;
+                      var defaultSearch = hblltoolbar.options.hblltoolbar_getPreference(hblltoolbar.options.HBLLTOOLBAR_SEARCH);
+                      if (defaultSearch == 'search_federated')
+                          return 'search_federated';
+                      if (defaultSearch == 'search_google')
+                          return 'search_google';
+                      if (defaultSearch == 'search_journal')
+                          return 'search_journal';
+                      if (defaultSearch == 'search_catalog')
+                          return 'search_catalog';
+                      else
+                          return '1';">
+                  <radio value="search_federated" id="HBLL-Combined-Federated" label="&federated.label;" tooltiptext="&federated.tooltiptext;" command="cmd_searchFederated" class="federated"/>
+                  <radio value="search_google" id="HBLL-Combined-Google" label="&google.label;" tooltiptext="&google.tooltiptext;" command="cmd_searchGoogle" class="scholar"/>
+                  <radio value="search_journal" id="HBLL-Combined-Journal" label="&journaltitle.label;" tooltiptext="&journaltitle.tooltiptext;" command="cmd_searchJournal" class="journals"/>
+                  <radio value="search_catalog" id="HBLL-Combined-Catalog" label="&catalog.label;" tooltiptext="&catalog.tooltiptext;" command="cmd_searchCatalog" class="catalog"/>
+              </radiogroup>
+          </menupopup>
+        </toolbarbutton>
+		
+        <toolbarseparator />
+      </toolbaritem>	
+	  
+	<toolbaritem flex="0">
+        <toolbarbutton id="HBLL-RY-Login" tooltiptext="&ry.tooltiptext;" command="cmd_loginRY"/>
+        <toolbarbutton id="HBLL-BB-Login" tooltiptext="&blackboard.tooltiptext;" command="cmd_loginBB"/>
+        <toolbarbutton id="HBLL-Add-MyLib" label="&addmylib.label;" tooltiptext="&addmylib.tooltiptext;" command="cmd_addmylib"/>
+    </toolbaritem>
+	
+    <toolbarseparator />
+	
+	<toolbaritem flex="0">
+		<toolbarbutton type="menu" id="HBLL_ISBN_Found" label="&isbn.label;" disabled="false">
+			<menupopup id="HBLL_ISBN_Lookup_Menupopup" command="cmd_ISBNLookup">
+			</menupopup>
+		</toolbarbutton>
+	</toolbaritem>	
+
+      <toolbarspring />
+    </toolbar>
+  </toolbox>
+</overlay>

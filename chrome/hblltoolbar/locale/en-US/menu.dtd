@@ -1,0 +1,44 @@
+<!ENTITY hblltoolbar.accesskey "T">
+<!ENTITY hblltoolbar.toolbarname "HBLL Toolbar">
+<!ENTITY mainmenu.tooltiptext "HBLL Toolbar Main Menu">
+<!ENTITY libraryhomepage.label "Library Home Page">
+<!ENTITY libraryhomepage.accesskey "L">
+<!ENTITY libraryhomepage.tooltiptext "Browse to the library home page">
+<!ENTITY getresearchhelp.label "Get Research Help">
+<!ENTITY getresearchhelp.accesskey "G">
+<!ENTITY getresearchhelp.tooltiptext "Contact a librarian for help with research">
+<!ENTITY researchguides.label "Research Guides">
+<!ENTITY researchguides.accesskey "E">
+<!ENTITY researchguides.tooltiptext "Get a research guide to help guide you through your research">
+<!ENTITY libraryhours.label "Library Hours">
+<!ENTITY libraryhours.accesskey "H">
+<!ENTITY libraryhours.tooltiptext "Find the hours the library is open">
+<!ENTITY floormaps.label "Floor Maps">
+<!ENTITY floormaps.accesskey "F">
+<!ENTITY floormaps.tooltiptext "Maps of the library">
+<!ENTITY groupstudyrooms.label "Group Study Room Reservations">
+<!ENTITY groupstudyrooms.accesskey "S">
+<!ENTITY groupstudyrooms.tooltiptext "Reserve a group study room">
+<!ENTITY myaccount.label "My Account">
+<!ENTITY myaccount.accesskey "M">
+<!ENTITY myaccount.tooltiptext "Renew library materials">
+<!ENTITY ill.label "Interlibrary Loan">
+<!ENTITY ill.accesskey "I">
+<!ENTITY ill.tooltiptext "Request materials that are not available at the HBLL">
+<!ENTITY prefs.label "Preferences...">
+<!ENTITY prefs.tooltiptext "Set HBLL Toolbar Preferences">
+<!ENTITY resize.tooltiptext "Resize the Search Box">
+<!ENTITY select.tooltiptext "Use drop-down to select a different type of search">
+<!ENTITY federated.label "Search Multiple Databases">
+<!ENTITY federated.tooltiptext "Search multiple databases simultaneously">
+<!ENTITY google.label "Search Google Scholar">
+<!ENTITY google.tooltiptext "Search Google Scholar">
+<!ENTITY journaltitle.label "Search Journal Finder">
+<!ENTITY journaltitle.tooltiptext "Find journals">
+<!ENTITY catalog.label "Search ScholarSearch">
+<!ENTITY catalog.tooltiptext "Search the library's resources">
+<!ENTITY ry.tooltiptext "Login to Route Y">
+<!ENTITY blackboard.tooltiptext "Login to Blackboard">
+<!ENTITY addmylib.label "Add To My Library">
+<!ENTITY addmylib.tooltiptext "Add this page to your personalized 'My Library' page">
+<!ENTITY isbn.label "Find Books By ISBN">   

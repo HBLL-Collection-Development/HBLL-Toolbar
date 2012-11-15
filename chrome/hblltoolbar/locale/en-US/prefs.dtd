@@ -1,0 +1,6 @@
+<!ENTITY title.label "HBLL Toolbar Preferences">
+<!ENTITY groupbox.label "Set Default Search">
+<!ENTITY radio.1 "Multiple Databases">
+<!ENTITY radio.2 "Google Scholar">
+<!ENTITY radio.3 "Journal Finder">
+<!ENTITY radio.4 "Library Catalog">
