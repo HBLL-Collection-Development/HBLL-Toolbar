@@ -1,4 +1,4 @@
-# HBLL Toolbar (Firefox Toolbar) #
+# HBLL Toolbar (Firefox Add-on) #
 
 A pre-compiled version can be downloaded directly from [Firefox’s Add-ons page][download].
 
