@@ -1,4 +1,6 @@
-# HBLL Toolbar (Firefox Add-on) #
+# ABANDONED. NO LONGER WORKING.
+
+## HBLL Toolbar (Firefox Add-on)
 
 A pre-compiled version can be downloaded directly from [Firefox’s Add-ons page][download].
 
